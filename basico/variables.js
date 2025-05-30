@@ -28,7 +28,7 @@ console.log("\nOperaciones con variables:");
 console.log("Suma:", a + b);
 console.log("Concatenación:", texto + " " + numero);
 
-// Reasignación de variables
+// // Reasignación de variables
 let x = 1;
 console.log("\nReasignación de variables:");
 console.log("Valor inicial de x:", x);
@@ -37,10 +37,11 @@ console.log("Nuevo valor de x:", x);
 
 // Intentar reasignar una constante (esto causará un error)
 // constante = "Nuevo valor";  // Esto daría error
+// console.log(constante);
 
-// Variables con scope (alcance)
+// // Variables con scope (alcance)
 {
     let variableLocal = "Solo visible en este bloque";
     console.log("\nVariable local:", variableLocal);
 }
-// console.log(variableLocal);  // Esto daría error porque la variable no es accesible fuera del bloque 
+console.log(variableLocal);  // Esto daría error porque la variable no es accesible fuera del bloque 
