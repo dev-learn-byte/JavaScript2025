@@ -47,4 +47,34 @@ console.log("typeof 123:", typeof 123);        // "number"
 console.log("typeof 'hola':", typeof "hola");     // "string"
 console.log("typeof true:", typeof true);       // "boolean"
 console.log("typeof {}:", typeof {});           // "object"
-console.log("typeof undefined:", typeof undefined);  // "undefined" 
+console.log("typeof undefined:", typeof undefined);  // "undefined"
+
+// 8. NaN (Not a Number)
+// NaN significa "No es un número". Es un valor especial que indica que una operación matemática no pudo devolver un número válido.
+
+// Ejemplos de cómo se produce NaN:
+console.log("'hola' * 3:", 'hola' * 3); // NaN, porque no se puede multiplicar texto por un número
+console.log("0 / 0:", 0 / 0);           // NaN, división indefinida
+console.log("Math.sqrt(-1):", Math.sqrt(-1)); // NaN, raíz cuadrada de un número negativo
+
+// Importante: NaN no es igual a sí mismo
+console.log("NaN === NaN:", NaN === NaN); // false
+
+// ¿Cómo detectar NaN?
+// Usando isNaN() o Number.isNaN()
+let valor1 = 'abc' / 2;
+console.log("isNaN(valor1):", isNaN(valor1)); // true
+console.log("Number.isNaN(valor1):", Number.isNaN(valor1)); // true
+
+// Ejemplo práctico:
+let resultadoNaN = "texto" * 5;
+if (isNaN(resultadoNaN)) {
+  console.log("El resultado no es un número válido.");
+} else {
+  console.log("El resultado es:", resultadoNaN);
+}
+
+// Resumen:
+// - NaN aparece cuando una operación matemática no tiene sentido.
+// - NaN no es igual a sí mismo (NaN === NaN es false).
+// - Usa isNaN() o Number.isNaN() para detectarlo. 
