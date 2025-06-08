@@ -29,7 +29,7 @@ if (nota >= 18) {
 }
 
 // Operador ternario anidado
-// Es una forma compacta de escribir condicionales múltiples:
+        // Es una forma compacta de escribir condicionales múltiples:
 // Si nota >= 18, resultado es "Excelente"
 // Si nota >= 11, resultado es "Aprobado"
 // Si no, resultado es "Desaprobado"
@@ -40,4 +40,3 @@ console.log("Resultado:", resultado);
 // Si edad >= 18, mensaje es "Mayor de edad", si no, "Menor de edad"
 let mensaje = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
 console.log("Operador ternario:", mensaje); 
-
