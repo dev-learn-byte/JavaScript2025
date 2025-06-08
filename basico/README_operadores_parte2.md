@@ -69,6 +69,52 @@ let valor = null;
 let resultado = valor ?? "Valor por defecto"; // "Valor por defecto"
 ```
 
+### Ejemplos adicionales
+
+```js
+// Ejemplo 1: con null
+let nombre = null;
+let usuario = nombre ?? "Invitado";
+console.log(usuario); // "Invitado"
+
+// Ejemplo 2: con undefined
+let edad;
+let edadUsuario = edad ?? 18;
+console.log(edadUsuario); // 18
+
+// Ejemplo 3: con valores "falsy" que NO son null ni undefined
+let puntos = 0;
+let puntosUsuario = puntos ?? 10;
+console.log(puntosUsuario); // 0
+
+let texto = "";
+let textoUsuario = texto ?? "Sin texto";
+console.log(textoUsuario); // ""
+```
+
+### Comparación con el operador OR (`||`)
+
+```js
+let puntos = 0;
+let resultado1 = puntos || 10; // 10
+let resultado2 = puntos ?? 10; // 0
+
+console.log(resultado1); // 10
+console.log(resultado2); // 0
+```
+
+#### Resumen comparativo
+
+| Valor izquierda | Valor derecha | Resultado con `??` | Resultado con `||` |
+|-----------------|--------------|--------------------|--------------------|
+| null            | "A"          | "A"                | "A"                |
+| undefined       | "A"          | "A"                | "A"                |
+| 0               | "A"          | 0                  | "A"                |
+| ""              | "A"          | ""                 | "A"                |
+| false           | "A"          | false              | "A"                |
+
+> Usa `??` cuando solo quieras asignar un valor por defecto si la variable es `null` o `undefined`. Es útil para evitar sobrescribir valores válidos como `0` o `""` (cadena vacía).
+
 ---
 
 ## 6. Operador de Encadenamiento Opcional (`?.`)
