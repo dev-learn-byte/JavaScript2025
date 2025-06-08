@@ -191,13 +191,224 @@ console.log(palabra2.slice(1, -1)); // "rograma"
 let texto3 = "JavaScript";
 console.log(texto3.slice(7, 4)); // ""
 
+
 ```
- 
 
- 
+# Arrays en JavaScript
 
+Un **array** (arreglo) es una estructura de datos que permite almacenar varios valores en una sola variable. Cada valor dentro del array se llama **elemento** y cada elemento tiene una **posición** (índice), que comienza en 0.
 
+## Ejemplo básico
 
+```js
+let frutas = ["manzana", "banana", "naranja"];
+```
 
+En este ejemplo, `frutas` es un array con 3 elementos.
+
+| Índice | Valor      |
+|--------|------------|
+|   0    | "manzana"  |
+|   1    | "banana"   |
+|   2    | "naranja"  |
+
+---
+
+## Cómo crear un array
+
+Hay varias formas de crear un array:
+
+### 1. Usando corchetes `[]` (la más común)
+
+```js
+let numeros = [1, 2, 3, 4, 5];
+```
+
+### 2. Usando el constructor `Array`
+
+```js
+let colores = new Array("rojo", "verde", "azul");
+```
+
+> **Nota:** Se recomienda usar los corchetes `[]` por simplicidad y claridad.
+
+---
+
+## Acceder a los elementos
+
+Para acceder a un elemento, se usa su índice:
+
+```js
+let primerFruta = frutas[0]; // "manzana"
+let segundaFruta = frutas[1]; // "banana"
+```
+
+---
+
+## Modificar elementos
+
+Puedes cambiar el valor de un elemento usando su índice:
+
+```js
+frutas[1] = "pera";
+console.log(frutas); // ["manzana", "pera", "naranja"]
+```
+
+---
+
+## Propiedad `.length`
+
+El array tiene una propiedad `.length` que indica cuántos elementos contiene:
+
+```js
+console.log(frutas.length); // 3
+```
+
+---
+
+## Métodos útiles de los arrays
+
+### Agregar elementos
+
+- **.push()**: Agrega al final
+
+  ```js
+  frutas.push("kiwi");
+  // ["manzana", "pera", "naranja", "kiwi"]
+  ```
+
+- **.unshift()**: Agrega al inicio
+
+  ```js
+  frutas.unshift("fresa");
+  // ["fresa", "manzana", "pera", "naranja", "kiwi"]
+  ```
+
+### Eliminar elementos
+
+- **.pop()**: Elimina el último
+
+  ```js
+  frutas.pop();
+  // ["fresa", "manzana", "pera", "naranja"]
+  ```
+
+- **.shift()**: Elimina el primero
+
+  ```js
+  frutas.shift();
+  // ["manzana", "pera", "naranja"]
+  ```
+
+### Buscar elementos
+
+- **.indexOf()**: Devuelve el índice del elemento (o -1 si no está)
+
+  ```js
+  let indice = frutas.indexOf("pera"); // 1
+  ```
+
+- **.includes()**: Devuelve `true` si el elemento está
+
+  ```js
+  frutas.includes("naranja"); // true
+  ```
+
+### Recorrer un array
+
+- **for clásico**
+
+  ```js
+  for (let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i]);
+  }
+  ```
+
+- **for...of**
+
+  ```js
+  for (let fruta of frutas) {
+    console.log(fruta);
+  }
+  ```
+
+- **forEach()**
+
+  ```js
+  frutas.forEach(function(fruta, indice) {
+    console.log(indice, fruta);
+  });
+  ```
+
+---
+
+## Otros métodos útiles
+
+- **.slice(inicio, fin)**: Devuelve una copia de una parte del array (no incluye el índice `fin`).
+
+  ```js
+  let algunasFrutas = frutas.slice(1, 3); // ["pera", "naranja"]
+  ```
+
+- **.splice(inicio, cantidad, ...elementos)**: Permite eliminar, reemplazar o agregar elementos.
+
+  ```js
+  // Eliminar 1 elemento en la posición 1
+  frutas.splice(1, 1); // ["manzana", "naranja"]
+  // Agregar elementos en la posición 1
+  frutas.splice(1, 0, "uva", "sandía"); // ["manzana", "uva", "sandía", "naranja"]
+  ```
+
+- **.join(separador)**: Une todos los elementos en un string.
+
+  ```js
+  let texto = frutas.join(", "); // "manzana, uva, sandía, naranja"
+  ```
+
+- **.reverse()**: Invierte el orden del array.
+
+  ```js
+  frutas.reverse();
+  ```
+
+- **.sort()**: Ordena los elementos (alfabéticamente por defecto).
+
+  ```js
+  frutas.sort();
+  ```
+
+---
+
+## Arrays de diferentes tipos
+
+Un array puede contener cualquier tipo de dato, incluso otros arrays (arrays multidimensionales):
+
+```js
+let mezcla = [1, "dos", true, [3, 4]];
+```
+
+---
+
+## Ejemplo práctico
+
+```js
+let numeros = [10, 20, 30, 40, 50];
+
+// Sumar todos los números
+let suma = 0;
+for (let numero of numeros) {
+  suma += numero;
+}
+console.log("La suma es:", suma); // La suma es: 150
+```
+
+---
+
+## Resumen
+
+- Los arrays almacenan varios valores en una sola variable.
+- Los índices empiezan en 0.
+- Tienen muchos métodos útiles para manipularlos.
+- Son fundamentales para trabajar con colecciones de datos en JavaScript.
 
 ---
