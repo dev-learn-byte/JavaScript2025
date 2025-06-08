@@ -190,7 +190,12 @@ console.log(palabra2.slice(1, -1)); // "rograma"
 
 let texto3 = "JavaScript";
 console.log(texto3.slice(7, 4)); // ""
+
 ```
+ 
+
+ 
+
 
 
 
