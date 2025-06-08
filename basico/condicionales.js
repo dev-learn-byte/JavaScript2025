@@ -39,4 +39,88 @@ console.log("Resultado:", resultado);
 // Operador ternario simple
 // Si edad >= 18, mensaje es "Mayor de edad", si no, "Menor de edad"
 let mensaje = (edad >= 18) ? "Mayor de edad" : "Menor de edad";
-console.log("Operador ternario:", mensaje); 
+console.log("Operador ternario:", mensaje);
+
+// Ejemplo básico de switch
+let dia = 3;
+let nombreDia;
+
+switch (dia) {
+    case 1:
+        nombreDia = "Lunes";
+        break;
+    case 2:
+        nombreDia = "Martes";
+        break;
+    case 3:
+        nombreDia = "Miércoles";
+        break;
+    case 4:
+        nombreDia = "Jueves";
+        break;
+    case 5:
+        nombreDia = "Viernes";
+        break;
+    case 6:
+        nombreDia = "Sábado";
+        break;
+    case 7:
+        nombreDia = "Domingo";
+        break;
+    default:
+        nombreDia = "Día no válido";
+}
+console.log("Día de la semana:", nombreDia);
+
+// Ejemplo de switch con strings
+let fruta = "manzana";
+let color;
+
+switch (fruta) {
+    case "manzana":
+        color = "roja o verde";
+        break;
+    case "plátano":
+        color = "amarillo";
+        break;
+    case "naranja":
+        color = "naranja";
+        break;
+    default:
+        color = "Color desconocido";
+}
+console.log("Color de la fruta:", color);
+
+// Ejemplo de múltiples casos para un mismo bloque
+let notaLetra = "E";
+let mensajeNota;
+
+switch (notaLetra) {
+    case "A":
+        mensajeNota = "Excelente";
+        break;
+    case "B":
+    case "C":
+        mensajeNota = "Aprobado";
+        break;
+    case "D":
+    case "F":
+        mensajeNota = "Desaprobado";
+        break;
+    default:
+        mensajeNota = "Nota no válida";
+}
+console.log("Mensaje de la nota:", mensajeNota);
+
+// Ejemplo de uso de continue dentro de un bucle con switch
+for (let i = 1; i <= 5; i++) {
+    switch (i) {
+        case 3:
+            // Si i es 3, saltamos a la siguiente iteración del bucle
+            continue;
+        default:
+            console.log("Valor de i:", i);
+    }
+}
+// Imprime: 1, 2, 4, 5 
+
