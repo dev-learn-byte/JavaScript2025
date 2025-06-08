@@ -118,7 +118,3 @@ console.log(mensaje);
 
 ---
 
-**Referencias:**
-- [MDN Web Docs: if...else](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/if...else)
-- [MDN Web Docs: switch](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/switch)
-- [MDN Web Docs: Operador condicional (ternario)](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) 
