@@ -40,3 +40,31 @@ console.log("Reemplazar palabra:", mensajeClima.replace("frío", "caliente")); /
 let edad = 27;
 let info = `Mi nombre es ${nombre} y tengo ${edad} años.`;
 console.log(info); 
+
+console.log("Hola,Brais!".indexOf("Brais"));
+console.log("Hola, Brais!".indexOf("Brais", 5));
+console.log("Hola, Brais!".indexOf("Brais", 5));
+
+console.log("Hola, Brais!".lastIndexOf("Brais"));
+
+// Más ejemplos de slice en strings
+let fraseSlice = "Aprender JavaScript es divertido";
+let palabra = fraseSlice.slice(9, 19);
+console.log("slice(9, 19):", palabra); // "JavaScript"
+
+let texto2 = "Hola mundo";
+console.log("slice(5):", texto2.slice(5)); // "mundo"
+
+let saludo2 = "¡Bienvenido!";
+console.log("slice(-4):", saludo2.slice(-4)); // "ido!"
+
+let nombre2 = "Fernando";
+console.log("slice(0, 3):", nombre2.slice(0, 3)); // "Fer"
+
+let palabra2 = "Programar";
+console.log("slice(1, -1):", palabra2.slice(1, -1)); // "rograma"
+
+let texto3 = "JavaScript";
+console.log("slice(7, 4):", texto3.slice(7, 4)); // ""
+
+
