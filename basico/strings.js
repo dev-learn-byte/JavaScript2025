@@ -66,5 +66,4 @@ console.log("slice(1, -1):", palabra2.slice(1, -1)); // "rograma"
 
 let texto3 = "JavaScript";
 console.log("slice(7, 4):", texto3.slice(7, 4)); // ""
-
-
+console.log("slice(0, 4):",texto3.slice(0, 4));
