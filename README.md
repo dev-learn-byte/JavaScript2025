@@ -412,3 +412,67 @@ console.log("La suma es:", suma); // La suma es: 150
 - Son fundamentales para trabajar con colecciones de datos en JavaScript.
 
 ---
+
+# Sets en JavaScript
+
+Un **Set** es una estructura de datos introducida en ES6 que permite almacenar una colección de valores únicos, es decir, no permite elementos duplicados. Los valores pueden ser de cualquier tipo: números, strings, objetos, etc.
+
+## Características principales
+
+- **No permite duplicados:** Si intentas agregar un valor que ya existe, simplemente lo ignora.
+- **Orden de inserción:** Los elementos se mantienen en el orden en que fueron agregados.
+- **Iterables:** Puedes recorrer un Set usando `for...of` o `forEach`.
+
+## Ejemplo básico
+
+```js
+const miSet = new Set();
+
+miSet.add(1);
+miSet.add(2);
+miSet.add(2); // Este valor no se agregará porque ya existe
+miSet.add('hola');
+miSet.add({ nombre: 'Juan' });
+
+console.log(miSet); // Set(4) { 1, 2, 'hola', { nombre: 'Juan' } }
+```
+
+## Métodos principales
+
+- **add(valor):** Agrega un nuevo valor al Set.
+- **delete(valor):** Elimina un valor del Set.
+- **has(valor):** Verifica si el valor existe en el Set.
+- **clear():** Elimina todos los valores del Set.
+- **size:** Propiedad que indica cuántos elementos tiene el Set.
+
+## Ejemplo de uso de métodos
+
+```js
+const numeros = new Set([1, 2, 3]);
+
+numeros.add(4); // Set {1, 2, 3, 4}
+numeros.delete(2); // Set {1, 3, 4}
+console.log(numeros.has(3)); // true
+console.log(numeros.size); // 3
+numeros.clear(); // Set {}
+```
+
+## Recorrer un Set
+
+```js
+const colores = new Set(['rojo', 'verde', 'azul']);
+
+for (let color of colores) {
+  console.log(color);
+}
+
+// O usando forEach
+colores.forEach(color => console.log(color));
+```
+
+## ¿Cuándo usar un Set?
+
+- Cuando necesitas almacenar una colección de valores únicos.
+- Cuando necesitas comprobar rápidamente si un valor ya existe en la colección.
+
+---
