@@ -117,6 +117,7 @@ let manzanaB = { tipo: 'Golden', peso: 150 };
 // Creamos el Set y agregamos manzanaA
 const cajaDeFrutas = new Set();
 cajaDeFrutas.add(manzanaA);
+//cajaDeFrutas.add(manzanaB); // manzanaB es un objeto diferente, se agrega
 
 // ¿Está manzanaA en la caja?
 console.log("¿Existe la referencia a 'manzanaA'?",cajaDeFrutas.has(manzanaA)); // true
