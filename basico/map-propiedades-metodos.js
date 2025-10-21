@@ -67,7 +67,7 @@ console.log("   (Como poner una etiqueta a cada cosa)");
 
 miMochila.set('lápiz', 'color rojo');
 miMochila.set('cuaderno', 'de matemáticas');
-miMochila.set(' ', 'blanco y suave');
+miMochila.set('borrador', 'blanco y suave');
 
 console.log("   Mi mochila ahora tiene:", miMochila);
 
