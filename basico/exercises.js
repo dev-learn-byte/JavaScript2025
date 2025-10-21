@@ -38,4 +38,4 @@ amigosHobbies.set('Carlos', new Set(['Fútbol', 'Videojuegos', 'Cine']));
 amigosHobbies.set('Ana', new Set(['Lectura', 'Cine', 'Viajes']));
 amigosHobbies.set('Luis', new Set(['Música', 'Fútbol', 'Viajes']));
 console.log(amigosHobbies);
-console.log("\n¡Practica estos ejercicios para ser un maestro de Map y Set! 🌟");
+
