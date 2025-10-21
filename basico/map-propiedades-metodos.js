@@ -67,7 +67,7 @@ console.log("   (Como poner una etiqueta a cada cosa)");
 
 miMochila.set('lápiz', 'color rojo');
 miMochila.set('cuaderno', 'de matemáticas');
-miMochila.set('borrador', 'blanco y suave');
+miMochila.set(' ', 'blanco y suave');
 
 console.log("   Mi mochila ahora tiene:", miMochila);
 
@@ -404,18 +404,3 @@ console.log("   • SET = Solo valores únicos (como una lista especial)");
 console.log("\n" + "=".repeat(50));
 console.log("🎉 ¡FIN DE LA LECCIÓN! ¡AHORA ERES UN EXPERTO! 🎉");
 console.log("=".repeat(50));
-
-// ============================================
-// EJERCICIOS PARA PRACTICAR 📚
-// ============================================
-
-console.log("\n\n📚 EJERCICIOS PARA PRACTICAR");
-console.log("-".repeat(50));
-
-console.log("\n✏️ Ejercicio 1: Crea un Map con tus 3 comidas favoritas y sus precios");
-console.log("✏️ Ejercicio 2: Crea un Set con los nombres de tus 5 mejores amigos");
-console.log("✏️ Ejercicio 3: Usa Map para guardar las calificaciones de 4 materias");
-console.log("✏️ Ejercicio 4: Usa Set para guardar los días de la semana que tienes clase");
-console.log("✏️ Ejercicio 5: Combina Map y Set para guardar los hobbies únicos de cada amigo");
-
-console.log("\n¡Practica estos ejercicios para ser un maestro de Map y Set! 🌟");
