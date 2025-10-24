@@ -34,7 +34,7 @@ for (let globo = 1; globo <= 3; globo++) {
 // 2️⃣ BUCLE WHILE - "Mientras" algo sea verdad
 // ============================================
 
-console.log("\n--- 2. BUCLE WHILE ---");
+    console.log("\n--- 2. BUCLE WHILE ---");
 console.log("Imagina que comes galletas mientras tengas hambre:\n");
 
 let galletas = 5;
@@ -44,7 +44,7 @@ while (galletas > 0 && hambre) {
     console.log("🍪 Comiendo galleta... Quedan " + galletas + " galletas");
     galletas--;
 
-    if (galletas === 2) {
+    if (galletas ===1) {
         hambre = false; // Ya no tengo hambre
         console.log("😊 Ya estoy lleno, no quiero más galletas");
     }
