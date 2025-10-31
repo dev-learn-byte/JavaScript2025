@@ -1,447 +1,491 @@
-// 🎯 FUNCIONES EN JAVASCRIPT - Ejemplos Prácticos
-// Ejecuta este archivo con: node basico/funciones.js
+// FUNCIONES 
+// Una función es un bloque de código diseñado para realizar una tarea específica.
+// Se define una función utilizando la palabra clave "function", seguida del nombre de la función, 
+// paréntesis y llaves que contienen el código a ejecutar.
 
+function miFuncion() {
+    // Código a ejecutar
+}
+// Para llamar o invocar la función, simplemente se escribe su nombre seguido de paréntesis.
+miFuncion();
+
+//FUNCIÓN SIMPLE (Sin parámetros)
 console.log("=".repeat(50));
-console.log("🎯 BIENVENIDO A LA PRÁCTICA DE FUNCIONES");
-console.log("=".repeat(50));
-console.log();
-
-// ============================================
-// 1️⃣ FUNCIÓN SIMPLE (sin parámetros, sin return)
-// ============================================
-console.log("1️⃣ FUNCIÓN SIMPLE");
-console.log("-".repeat(50));
-
+console.log('1)FUNCIÓN SIMPLE (Sin parámetros)');
+// Una función simple  es aquella que no recibe parámetros y no devuelve un valor.
+// que no recibe parámetros y solo imprime mensajes en la consola.
 function saludar() {
-    console.log("¡Hola! 👋");
-    console.log("¡Bienvenido a JavaScript!");
+    console.log("¡Hola, bienvenido!");
+    console.log("Esta es una función simple.");
+}
+// Llamada a la función
+saludar();
+// Salida:
+// ¡Hola, bienvenido!
+// Esta es una función simple.
+
+console.log("=====Mas ejemplos de funciones simples:=====");
+function despedirse() {
+    console.log("¡Adiós! ¡Hasta luego!");
+}
+// Llamada a la función
+despedirse();
+// Salida:  ¡Adiós! ¡Hasta luego!
+
+// EJEMPLO  Contar manzanas
+console.log("---EJEMPLO:Contar manzanas---");
+function contarManzanas() {
+    console.log("🍎 Tengo 1 manzana");
+    console.log("🍎🍎 Tengo 2 manzanas");
+    console.log("🍎🍎🍎 Tengo 3 manzanas");
 }
 
-saludar(); // Llamamos la función
-console.log();
+contarManzanas(); // Ejecuta todo el código de adentro
 
-// ============================================
-// 2️⃣ FUNCIÓN CON PARÁMETROS
-// ============================================
-console.log("2️⃣ FUNCIÓN CON PARÁMETROS");
-console.log("-".repeat(50));
 
+// EJEMPLO  Hacer ejercicio
+console.log("---EJEMPLO:Hacer ejercicio---");
+function hacerEjercicio() {
+    console.log("1. Salto 🤸");
+    console.log("2. Salto 🤸");
+    console.log("3. Salto 🤸");
+    console.log("¡Terminé!");
+}
+
+hacerEjercicio(); // Hace los 3 saltos
+
+console.log("=".repeat(50));
+
+//2️⃣ FUNCIÓN CON PARÁMETROS4
+console.log('2) FUNCIÓN CON PARÁMETROS');
+// Una función con parámetros es aquella que recibe valores de entrada (parámetros) 
+// para realizar operaciones o cálculos específicos.
 function saludarPersona(nombre) {
-    console.log("¡Hola " + nombre + "! 👋");
+    console.log(`¡Hola, ${nombre}! Bienvenido.`);
+}
+// Llamada a la función con diferentes argumentos
+saludarPersona("Tony Stark"); // Salida: ¡Hola, Tony Stark! Bienvenido/a.
+saludarPersona("Hulk"); // Salida: ¡Hola, Hulk! Bienvenido/a.
+saludarPersona("Steve Rogers"); // Salida: ¡Hola, Steve Rogers! Bienvenido/a.
+saludarPersona("Thor"); // Salida: ¡Hola, Thor! Bienvenido/a.
+//ejemplos de funciones con parámetros
+console.log("=====Mas ejemplos de funciones con parámetros:=====");
+function despedirsePersona(nombre) {
+    console.log(`¡Adiós, ${nombre}!`);
+    console.log(`¡Que tengas un buen día, ${nombre}!`);
+
+}
+// Llamada a la función con diferentes argumentos
+despedirsePersona("Natasha Romanoff");
+despedirsePersona("Clint Barton");
+despedirsePersona("Wanda Maximoff");
+despedirsePersona("Vision");
+
+//Contar frutas (con 2 parámetros)
+console.log("---EJEMPLO:Contar frutas (con 2 parámetros)---");
+function contarFrutas(manzanas, peras) {
+    console.log("Tengo " + manzanas + " manzanas 🍎");
+    console.log("Tengo " + peras + " peras 🍐");
+    console.log("Total: " + (manzanas + peras) + " frutas");
 }
 
-saludarPersona("María");
-saludarPersona("Pedro");
-saludarPersona("Ana");
-console.log();
+contarFrutas(3, 2);  // 3 manzanas, 2 peras = 5 frutas
+contarFrutas(5, 4);  // 5 manzanas, 4 peras = 9 frutas
+contarFrutas(10, 7); // 10 manzanas, 7 peras = 17 frutas
 
-// Con varios parámetros
-function presentar(nombre, edad, ciudad) {
-    console.log("Me llamo " + nombre);
-    console.log("Tengo " + edad + " años");
-    console.log("Vivo en " + ciudad);
-    console.log("---");
+// Hacer un sándwich personalizado
+console.log("---EJEMPLO:Hacer un sándwich personalizado---");
+function hacerSandwich(pan, relleno, salsa) {
+    console.log("🍞 Tomamos " + pan);
+    console.log("🥪 Le ponemos " + relleno);
+    console.log("🥫 Le agregamos " + salsa);
+    console.log("¡Sándwich listo!👌🥪");
 }
 
-presentar("Luis", 10, "Madrid");
-presentar("Carmen", 12, "Barcelona");
-console.log();
+hacerSandwich("pan integral", "jamón", "mayonesa");
+hacerSandwich("pan blanco", "queso", "mostaza");
+console.log("=".repeat(50));
 
-// ============================================
-// 3️⃣ FUNCIÓN QUE DEVUELVE UN VALOR (con return)
-// ============================================
-console.log("3️⃣ FUNCIÓN CON RETURN");
-console.log("-".repeat(50));
+//3️⃣ FUNCIÓN CON VALOR DE RETORNO
+console.log('3) FUNCIÓN CON VALOR DE RETORNO');
+// Una función con valor de retorno es aquella que devuelve un valor después de realizar
+// una operación o cálculo. Se utiliza la palabra clave "return" para especificar el valor que se va a devolver.
 
-function sumar(numero1, numero2) {
-    let resultado = numero1 + numero2;
-    return resultado;
+
+function sumar(a, b) {
+    console.log("a)Sumando " + a + " + " + b);
+    console.log("b)El resultado es: " + (a + b));
+    console.log("c)Devolviendo el resultado...");
+    return a + b;
 }
+// Llamada a la función y almacenamiento del resultado
+let resultado1 = sumar(5, 3);
+console.log("--Resultado de sumar(5, 3):", resultado1); // Salida: 8
+let resultado2 = sumar(10, 15);
+console.log("--Resultado de sumar(10, 15):", resultado2); // Salida: 25
 
-let miSuma = sumar(5, 3);
-console.log("5 + 3 = " + miSuma);
 
-console.log("10 + 20 = " + sumar(10, 20));
-console.log("100 + 50 = " + sumar(100, 50));
-console.log();
 
-// ============================================
-// 4️⃣ CALCULADORA BÁSICA
-// ============================================
-console.log("4️⃣ CALCULADORA BÁSICA");
-console.log("-".repeat(50));
-
+//ejemplos de funciones con valor de retorno
+console.log("=====Mas ejemplos de funciones con valor de retorno:=====");
 function restar(a, b) {
     return a - b;
 }
+let resultado3 = restar(10, 5);
+console.log("Resultado de restar(10, 5):", resultado3); // Salida: 5
+let resultado4 = restar(20, 15);
+console.log("Resultado de restar(20, 15):", resultado4); // Salida: 5
 
-function multiplicar(a, b) {
-    return a * b;
+// Calcular el área de un rectángulo
+console.log("---EJEMPLO:Calcular el área de un rectángulo---");
+function calcularAreaRectangulo(ancho, alto) {
+    return ancho * alto;
 }
+let area1 = calcularAreaRectangulo(5, 10);
+console.log("Área del rectángulo (5x10):", area1); // Salida: 50
+let area2 = calcularAreaRectangulo(7, 3);
+console.log("Área del rectángulo (7x3):", area2); // Salida: 21
 
-function dividir(a, b) {
-    if (b === 0) {
-        return "❌ No se puede dividir entre cero";
-    }
-    return a / b;
+// Calcular el perímetro de un círculo
+console.log("---EJEMPLO:Calcular el perímetro de un círculo---");
+function calcularPerimetroCirculo(radio) {
+    return 2 * Math.PI * radio;
 }
+let perimetro1 = calcularPerimetroCirculo(5);
+console.log(typeof (("Perímetro del círculo (radio 5):", perimetro1)));//.toFixed(2)); // Salida: 31.42
+console.log("Perímetro del círculo (radio 5):", perimetro1);
+let perimetro2 = calcularPerimetroCirculo(10);
+console.log(typeof (("Perímetro del círculo (radio 10):", perimetro2.toFixed(2)))); // Salida: 62.83
+console.log("Perímetro del círculo (radio 10):", perimetro2.toFixed(2));
 
-console.log("Suma: 10 + 5 = " + sumar(10, 5));
-console.log("Resta: 10 - 5 = " + restar(10, 5));
-console.log("Multiplicación: 10 × 5 = " + multiplicar(10, 5));
-console.log("División: 10 ÷ 5 = " + dividir(10, 5));
-console.log("División por cero: 10 ÷ 0 = " + dividir(10, 0));
-console.log();
+//4️⃣ FUNCIONES ANÓNIMAS
+console.log('4) FUNCIONES ANÓNIMAS');
+// Una función anónima es una función que no tiene un nombre asignado. 
+// Se utiliza comúnmente como una función de devolución de llamada (callback) o se asigna a una variable.
 
-// ============================================
-// 5️⃣ FUNCIÓN CON CONDICIONALES
-// ============================================
-console.log("5️⃣ FUNCIÓN CON CONDICIONALES");
-console.log("-".repeat(50));
+let saludo = function (nombre) {
+    console.log("¡Hola, " + nombre + "!");
+};
 
-function esParOImpar(numero) {
-    if (numero % 2 === 0) {
-        return "✅ El número " + numero + " es PAR";
-    } else {
-        return "✅ El número " + numero + " es IMPAR";
-    }
+saludo("Natasha Romanoff");// La usamos con el nombre de la variablex|
+saludo("Clint Barton");
+saludo("Wanda Maximoff");
+saludo("Vision");
+
+// EJEMPLO: Función anónima para calcular el cuadrado de un número
+console.log("---EJEMPLO: Función anónima para calcular el cuadrado de un número---");
+let cuadrado = function (numero) {
+    return numero * numero;
+};
+let resultadoCuadrado = cuadrado(4);
+console.log("El cuadrado de 4 es:", resultadoCuadrado); // Salida: 16
+let resultadoCuadrado2 = cuadrado(7);
+console.log("El cuadrado de 7 es:", resultadoCuadrado2); // Salida: 49
+// EJEMPLO: Función anónima para saludar
+console.log("---EJEMPLO: Función anónima para saludar---");
+let saludarAnonimo = function (nombre) {
+    console.log("¡Hola, " + nombre + "! Esta es una función anónima.");
+};
+saludarAnonimo("Bruce Banner");
+saludarAnonimo("Peter Parker");
+// EJEMPLO: Función anónima para calcular el área de un triángulo
+console.log("---EJEMPLO: Función anónima para calcular el área de un triángulo---");
+let areaTriangulo = function (base, altura) {
+    return (base * altura) / 2;
 }
+let area1Triangulo = areaTriangulo(5, 10);
 
-console.log(esParOImpar(4));
-console.log(esParOImpar(7));
-console.log(esParOImpar(10));
-console.log(esParOImpar(15));
-console.log();
-
-// ============================================
-// 6️⃣ FUNCIÓN PARA CALCULAR EDAD DE PERRO
-// ============================================
-console.log("6️⃣ CALCULADORA DE EDAD PERRUNA 🐕");
-console.log("-".repeat(50));
-
-function edadPerruna(edadHumana) {
-    let edadPerro = edadHumana * 7;
-    return edadPerro;
-}
-
-console.log("Si tienes 5 años, en edad de perro tienes: " + edadPerruna(5) + " años");
-console.log("Si tienes 10 años, en edad de perro tienes: " + edadPerruna(10) + " años");
-console.log("Si tienes 15 años, en edad de perro tienes: " + edadPerruna(15) + " años");
-console.log();
-
-// ============================================
-// 7️⃣ FUNCIÓN PARA CALCULAR ÁREA
-// ============================================
-console.log("7️⃣ CALCULADORA DE ÁREAS");
-console.log("-".repeat(50));
-
-function calcularAreaCuadrado(lado) {
-    return lado * lado;
-}
-
-function calcularAreaRectangulo(base, altura) {
-    return base * altura;
-}
-
-function calcularAreaCirculo(radio) {
-    return 3.1416 * radio * radio;
-}
-
-console.log("Área de un cuadrado de lado 5: " + calcularAreaCuadrado(5) + " cm²");
-console.log("Área de un rectángulo 5×10: " + calcularAreaRectangulo(5, 10) + " cm²");
-console.log("Área de un círculo de radio 3: " + calcularAreaCirculo(3).toFixed(2) + " cm²");
-console.log();
-
-// ============================================
-// 8️⃣ FUNCIÓN CON PARÁMETROS POR DEFECTO
-// ============================================
-console.log("8️⃣ PARÁMETROS POR DEFECTO");
-console.log("-".repeat(50));
-
-function saludarConHora(nombre = "amigo", hora = "día") {
-    console.log("¡Buenos " + hora + ", " + nombre + "!");
-}
-
-saludarConHora("María", "días");
-saludarConHora("Pedro", "tardes");
-saludarConHora(); // Usa los valores por defecto
-console.log();
-
-// ============================================
-// 9️⃣ FUNCIÓN QUE LLAMA A OTRA FUNCIÓN
-// ============================================
-console.log("9️⃣ FUNCIONES QUE LLAMAN A OTRAS FUNCIONES");
-console.log("-".repeat(50));
-
-function calcularPromedio(num1, num2) {
-    let suma = sumar(num1, num2); // Usa la función sumar
-    let promedio = suma / 2;
-    return promedio;
-}
-
-console.log("Promedio de 10 y 20: " + calcularPromedio(10, 20));
-console.log("Promedio de 5 y 15: " + calcularPromedio(5, 15));
-console.log();
-
-// ============================================
-// 🔟 FUNCIÓN PARA CONVERTIR TEMPERATURAS
-// ============================================
-console.log("🔟 CONVERSOR DE TEMPERATURAS 🌡️");
-console.log("-".repeat(50));
-
-function celsiusAFahrenheit(celsius) {
-    let fahrenheit = (celsius * 9 / 5) + 32;
-    return fahrenheit;
-}
-
-function fahrenheitACelsius(fahrenheit) {
-    let celsius = (fahrenheit - 32) * 5 / 9;
-    return celsius;
-}
-
-console.log("0°C = " + celsiusAFahrenheit(0) + "°F");
-console.log("25°C = " + celsiusAFahrenheit(25) + "°F");
-console.log("100°C = " + celsiusAFahrenheit(100) + "°F");
-console.log("---");
-console.log("32°F = " + fahrenheitACelsius(32).toFixed(1) + "°C");
-console.log("77°F = " + fahrenheitACelsius(77).toFixed(1) + "°C");
-console.log();
-
-// ============================================
-// 1️⃣1️⃣ FUNCIÓN PARA CALCULAR DESCUENTOS
-// ============================================
-console.log("1️⃣1️⃣ CALCULADORA DE DESCUENTOS 💰");
-console.log("-".repeat(50));
-
-function calcularDescuento(precio, porcentajeDescuento) {
-    let descuento = precio * (porcentajeDescuento / 100);
-    let precioFinal = precio - descuento;
-
-    console.log("Precio original: $" + precio);
-    console.log("Descuento (" + porcentajeDescuento + "%): -$" + descuento);
-    console.log("Precio final: $" + precioFinal);
-    console.log("---");
-
-    return precioFinal;
-}
-
-calcularDescuento(100, 20);
-calcularDescuento(50, 10);
-calcularDescuento(200, 15);
-console.log();
-
-// ============================================
-// 1️⃣2️⃣ FUNCIÓN PARA VERIFICAR CONTRASEÑA
-// ============================================
-console.log("1️⃣2️⃣ VERIFICADOR DE CONTRASEÑAS 🔐");
-console.log("-".repeat(50));
-
-function verificarContraseña(contraseña) {
-    if (contraseña.length < 6) {
-        return "❌ Contraseña muy corta (mínimo 6 caracteres)";
-    } else if (contraseña.length < 8) {
-        return "⚠️ Contraseña débil (recomendado 8+ caracteres)";
-    } else {
-        return "✅ Contraseña segura";
-    }
-}
-
-console.log(verificarContraseña("abc"));
-console.log(verificarContraseña("abc123"));
-console.log(verificarContraseña("abc12345"));
-console.log(verificarContraseña("MiContraseña123"));
-console.log();
-
-// ============================================
-// 1️⃣3️⃣ FUNCIÓN PARA GENERAR MENSAJES
-// ============================================
-console.log("1️⃣3️⃣ GENERADOR DE MENSAJES DE CUMPLEAÑOS 🎂");
-console.log("-".repeat(50));
-
-function felicitarCumpleaños(nombre, edad) {
-    let mensaje = "🎉 ¡FELIZ CUMPLEAÑOS " + nombre.toUpperCase() + "! 🎂\n";
-    mensaje += "¡Ya tienes " + edad + " años! 🎈\n";
-    mensaje += "Velas: " + "🕯️ ".repeat(edad);
-    return mensaje;
-}
-
-console.log(felicitarCumpleaños("María", 10));
-console.log();
-console.log(felicitarCumpleaños("Pedro", 8));
-console.log();
-
-// ============================================
-// 1️⃣4️⃣ FUNCIÓN PARA CALCULAR CALIFICACIONES
-// ============================================
-console.log("1️⃣4️⃣ CALCULADORA DE CALIFICACIONES 📚");
-console.log("-".repeat(50));
-
-function obtenerCalificacion(puntos) {
-    if (puntos >= 90) {
-        return "A - Excelente 🌟";
-    } else if (puntos >= 80) {
-        return "B - Muy bien 👍";
-    } else if (puntos >= 70) {
-        return "C - Bien ✓";
-    } else if (puntos >= 60) {
-        return "D - Suficiente ⚠️";
-    } else {
-        return "F - Reprobado ❌";
-    }
-}
-
-console.log("95 puntos: " + obtenerCalificacion(95));
-console.log("85 puntos: " + obtenerCalificacion(85));
-console.log("75 puntos: " + obtenerCalificacion(75));
-console.log("65 puntos: " + obtenerCalificacion(65));
-console.log("50 puntos: " + obtenerCalificacion(50));
-console.log();
-
-// ============================================
-// 1️⃣5️⃣ FUNCIÓN FLECHA (Arrow Function)
-// ============================================
-console.log("1️⃣5️⃣ FUNCIONES FLECHA (ARROW FUNCTIONS)");
-console.log("-".repeat(50));
-
-// Forma tradicional
-function duplicarTradicional(numero) {
-    return numero * 2;
-}
-
-// Forma flecha
-const duplicarFlecha = (numero) => {
-    return numero * 2;
-}
-
-// Forma flecha corta
-const duplicarCorta = numero => numero * 2;
-
-console.log("Tradicional: " + duplicarTradicional(5));
-console.log("Flecha: " + duplicarFlecha(5));
-console.log("Flecha corta: " + duplicarCorta(5));
-console.log();
-
-// ============================================
-// 1️⃣6️⃣ FUNCIÓN CON MÚLTIPLES RETURNS
-// ============================================
-console.log("1️⃣6️⃣ FUNCIÓN CON MÚLTIPLES RETURNS");
-console.log("-".repeat(50));
-
-function clasificarEdad(edad) {
-    if (edad < 0) {
-        return "❌ Edad inválida";
-    }
-    if (edad < 12) {
-        return "👶 Niño";
-    }
-    if (edad < 18) {
-        return "🧒 Adolescente";
-    }
-    if (edad < 60) {
-        return "👨 Adulto";
-    }
-    return "👴 Adulto mayor";
-}
-
-console.log("Edad 5: " + clasificarEdad(5));
-console.log("Edad 15: " + clasificarEdad(15));
-console.log("Edad 30: " + clasificarEdad(30));
-console.log("Edad 70: " + clasificarEdad(70));
-console.log();
-
-// ============================================
-// 1️⃣7️⃣ FUNCIÓN PARA CONTAR VOCALES
-// ============================================
-console.log("1️⃣7️⃣ CONTADOR DE VOCALES");
-console.log("-".repeat(50));
-
-function contarVocales(texto) {
-    let contador = 0;
-    let textoMinusculas = texto.toLowerCase();
-
-    for (let i = 0; i < textoMinusculas.length; i++) {
-        let letra = textoMinusculas[i];
-        if (letra === 'a' || letra === 'e' || letra === 'i' ||
-            letra === 'o' || letra === 'u') {
-            contador++;
-        }
-    }
-
-    return contador;
-}
-
-let frase1 = "Hola mundo";
-let frase2 = "JavaScript es divertido";
-
-console.log("'" + frase1 + "' tiene " + contarVocales(frase1) + " vocales");
-console.log("'" + frase2 + "' tiene " + contarVocales(frase2) + " vocales");
-console.log();
-
-// ============================================
-// 1️⃣8️⃣ FUNCIÓN PARA INVERTIR TEXTO
-// ============================================
-console.log("1️⃣8️⃣ INVERSOR DE TEXTO");
-console.log("-".repeat(50));
-
-function invertirTexto(texto) {
-    let textoInvertido = "";
-    for (let i = texto.length - 1; i >= 0; i--) {
-        textoInvertido += texto[i];
-    }
-    return textoInvertido;
-}
-
-console.log("Original: Hola");
-console.log("Invertido: " + invertirTexto("Hola"));
-console.log();
-console.log("Original: JavaScript");
-console.log("Invertido: " + invertirTexto("JavaScript"));
-console.log();
-
-// ============================================
-// 1️⃣9️⃣ FUNCIÓN PARA GENERAR TABLA DE MULTIPLICAR
-// ============================================
-console.log("1️⃣9️⃣ GENERADOR DE TABLA DE MULTIPLICAR");
-console.log("-".repeat(50));
-
-function tablaMultiplicar(numero) {
-    console.log("📊 Tabla del " + numero + ":");
-    for (let i = 1; i <= 10; i++) {
-        console.log(numero + " × " + i + " = " + (numero * i));
-    }
-}
-
-tablaMultiplicar(5);
-console.log();
-
-// ============================================
-// 2️⃣0️⃣ FUNCIÓN PARA CALCULAR FACTORIAL
-// ============================================
-console.log("2️⃣0️⃣ CALCULADORA DE FACTORIAL");
-console.log("-".repeat(50));
-
-function factorial(numero) {
-    if (numero === 0 || numero === 1) {
-        return 1;
-    }
-
-    let resultado = 1;
-    for (let i = 2; i <= numero; i++) {
-        resultado *= i;
-    }
-    return resultado;
-}
-
-console.log("Factorial de 5: " + factorial(5));
-console.log("Factorial de 6: " + factorial(6));
-console.log("Factorial de 7: " + factorial(7));
-console.log();
-
-// ============================================
-// 🎉 FIN DE LOS EJEMPLOS
-// ============================================
+console.log("Área del triángulo (base 5, altura 10):", area1Triangulo); // Salida: 25
+let area2Triangulo = areaTriangulo(8, 6);
+console.log("Área del triángulo (base 8, altura 6):", area2Triangulo); // Salida: 24
 console.log("=".repeat(50));
-console.log("🎉 ¡FELICIDADES! Has completado todos los ejemplos");
-console.log("💪 Ahora intenta crear tus propias funciones");
-console.log("📚 Revisa el archivo README_funciones.md para más info");
+//5️⃣ FUNCIONES FLECHA (ARROW FUNCTIONS)
+console.log('5) FUNCIONES FLECHA (ARROW FUNCTIONS)');
+// Las funciones flecha son una forma más concisa de escribir funciones en JavaScript. 
+// Se definen utilizando la sintaxis "=>".  
+// Arrow function simple
+// Ejemplo de función flecha sin parámetros
+console.log("---EJEMPLO: Función flecha para saludar rápidamente---");
+
+let saludarRapido = () => {
+    console.log("¡Hola! 👋");
+};
+
+saludarRapido();// Salida: ¡Hola!   👋
+
+
+// EJEMPLO: Función flecha para sumar dos números
+console.log("---EJEMPLO: Función flecha para sumar dos números---");
+let sumarFlecha = (a, b) => {
+    return a + b;
+};
+let resultadoFlecha = sumarFlecha(7, 3);
+console.log("Resultado de sumarFlecha(7, 3):", resultadoFlecha); // Salida: 10
+// EJEMPLO: Función flecha para calcular el doble de un número
+console.log("---EJEMPLO: Función flecha para calcular el doble de un número---");
+let doble = numero => numero * 2;
+let resultadoDoble = doble(5);
+console.log("El doble de 5 es:", resultadoDoble); // Salida: 10
+let resultadoDoble2 = doble(8);
+console.log("El doble de 8 es:", resultadoDoble2); // Salida: 16
+
+// EJEMPLO: Función flecha para saludar a una persona
+console.log("---EJEMPLO: Función flecha para saludar a una persona---");
+let saludarPersonaFlecha = nombre => {
+    console.log(`¡Hola, ${nombre}! Esta es una función flecha.`);
+};
+saludarPersonaFlecha("Tony Stark");
+saludarPersonaFlecha("Steve Rogers");
+
+
+// Versión súper corta (una línea)
+console.log("---EJEMPLO: Función flecha para multiplicar dos números (versión súper corta)---");
+
+let multiplicar = (a, b) => a * b;  // No necesita 'return'
+
+console.log(multiplicar(3, 4));  // 12
+console.log(multiplicar(5, 2));  // 10
 console.log("=".repeat(50));
+
+// 6️⃣ FUNCIONES ANIDADAS (Una función dentro de otra)
+
+// Las funciones anidadas son funciones definidas dentro de otra función.
+// Estas funciones internas solo son accesibles desde la función externa.
+console.log('6) FUNCIONES ANIDADAS (Una función dentro de otra)');
+function externa() {
+    console.log("Estoy en la función externa");
+
+    // Esta función está DENTRO de la otra  
+    function interna() {
+        console.log("Estoy en la función interna");
+    }
+    // Llamada a la función interna desde la función externa
+    interna();
+    console.log("Volví a la función externa");
+}
+
+// Llamada a la función externa
+externa();
+// Salida:
+// Estoy en la función externa
+// Estoy en la función interna
+// Volví a la función externa
+
+//Calculadora
+console.log("---EJEMPLO: Calculadora con funciones anidadas---");
+function calculadora(numero1, numero2) {
+
+    function sumar() {
+        return numero1 + numero2;
+    }
+
+    function restar() {
+        return numero1 - numero2;
+    }
+
+    console.log("Suma: " + sumar());
+    console.log("Resta: " + restar());
+}
+
+calculadora(10, 5);
+// Imprime:
+// Suma: 15
+// Resta: 5
+console.log("=".repeat(50));
+//7️⃣ FUNCIONES DE ORDEN SUPERIOR (Funciones que usan otras funciones)
+console.log('7) FUNCIONES DE ORDEN SUPERIOR (Funciones que usan otras funciones)');
+// Las funciones de orden superior son funciones que pueden recibir otras funciones como argumentos
+// o devolver funciones como resultado.
+// Función que RECIBE otra función como parámetro
+function hacerAlgoTresVeces(accion) {
+    accion(); // Ejecuta la función que recibió
+    accion();
+    accion();
+}
+
+// Creamos una función simple
+function aplaudir() {
+    console.log("👏 ¡Aplauso!");
+}
+
+// Le pasamos la función a otra función
+hacerAlgoTresVeces(aplaudir);
+// Imprime:
+// 👏 ¡Aplauso!
+// 👏 ¡Aplauso!
+// 👏 ¡Aplauso!
+
+
+// EJEMPLO: Función de orden superior para operar con dos números
+console.log("---EJEMPLO: Función de orden superior para operar con dos números---");
+
+    function operar(a, b, operacion) {
+        return operacion(a, b);
+        console.log("Operación realizada.");    // Esta línea nunca se ejecutará
+                
+    }
+
+    function sumar(a, b) {
+        return a + b;
+        console.log("Suma realizada."); // Esta línea nunca se ejecutará
+        
+    }
+
+    function restar(a, b) {
+        return a - b;
+        console.log("Resta realizada."); // Esta línea nunca se ejecutará
+    }
+    let resultadoSuma = operar(5, 3, sumar);
+
+    console.log("Resultado de la suma:", resultadoSuma); // Salida: 8
+    let resultadoResta = 
+    operar(10, 4, restar);
+    console.log("Resultado de la resta:", resultadoResta); // Salida: 6
+
+// EJEMPLO: Función de orden superior para aplicar un descuento
+console.log("---EJEMPLO: Función de orden superior para aplicar un descuento---");
+function aplicarDescuento(precio, descuento, calcularDescuento) {
+    let montoDescuento = calcularDescuento(precio, descuento);
+    return precio - montoDescuento;
+}
+
+function calcularDescuento(precio, descuento) {
+    return precio * (descuento / 100);
+}
+let precioFinal = aplicarDescuento(200, 15, calcularDescuento);
+console.log("Precio final con descuento:", precioFinal); // Salida: 170
+let precioFinal2 = aplicarDescuento(150, 10, calcularDescuento);
+console.log("Precio final con descuento:", precioFinal2); // Salida: 135
+console.log("=".repeat(50));
+
+//8️⃣ FUNCIONES GLOBALES vs INTERNAS (Scope/Alcance)
+console.log('8) FUNCIONES GLOBALES vs INTERNAS (Scope/Alcance)');
+// Las funciones globales son accesibles desde cualquier parte del código,
+// mientras que las funciones internas (o locales) solo son accesibles dentro del bloque donde se definen.
+// ¿Para qué sirve? Para mantener las cosas organizadas y evitar que las variables se mezclen.
+
+// Función global
+// Variable GLOBAL (todos pueden verla)
+
+console.log("---EJEMPLO: Función global vs interna---");
+console.log("===Variable GLOBAL===");
+let nombreGlobal = "Juan";
+
+function funcionA() {
+    console.log("Función A ve: " + nombreGlobal); // Puede verla
+}
+
+function funcionB() {
+    console.log("Función B ve: " + nombreGlobal); // También puede verla
+}
+
+funcionA(); // Función A ve: Juan
+funcionB(); // Función B ve: Juan
+
+// Variable INTERNA (solo vive dentro de la función)
+console.log("===Variable INTERNA===");
+function miFuncion() {
+    let nombreInterno = "María"; // Solo existe aquí dentro
+    console.log(nombreInterno);  // Funciona bien
+}
+
+miFuncion(); // Imprime: María
+
+// Si intentamos usar la variable fuera, ¡ERROR!
+// console.log(nombreInterno); // ❌ Error: no está definida
+
+// EJEMPLO: Puntos en un juego
+console.log("---EJEMPLO: Puntos en un juego---");
+
+let puntosGlobales = 0; // Todos pueden verlo
+
+function jugarNivel1() {
+    let puntosNivel = 10; // Solo existe aquí
+    puntosGlobales += puntosNivel;
+    //puntosGlobales←puntosGlobales+puntosNivel
+    console.log("Puntos del nivel 1: " + puntosNivel);
+    console.log("Puntos totales: " + puntosGlobales);
+}
+
+function jugarNivel2() {
+    let puntosNivel = 20; // Diferente al de nivel1
+    puntosGlobales += puntosNivel;
+    //puntosGlobales←puntosGlobales+puntosNivel
+    console.log("Puntos del nivel 2: " + puntosNivel);
+    console.log("Puntos totales: " + puntosGlobales);
+}
+
+jugarNivel1();
+// Puntos del nivel: 10
+// Puntos totales: 10
+
+jugarNivel2();
+// Puntos del nivel: 20
+// Puntos totales: 30
+
+console.log("=".repeat(50));
+
+//9️⃣ FUNCIONES CON FOREACH (Recorrer listas)
+
+console.log('9) FUNCIONES CON FOREACH (Recorrer listas)');
+// El método forEach() es una función de orden superior que se utiliza para 
+// iterar sobre los elementos de un array (lista) y ejecutar una función para cada elemento.    
+let fruit = ["manzana", "banana", "cereza"];
+
+fruit.forEach(function (fruta) {
+    console.log("Me gusta la " + fruta);
+});
+// Salida:
+// Me gusta la manzana
+// Me gusta la banana
+// Me gusta la cereza   
+// EJEMPLO: Usando forEach con una función flecha
+console.log("---EJEMPLO: Usando forEach con una función flecha---");
+let numeros = [1, 2, 3, 4, 5];
+
+numeros.forEach(numero => {
+    console.log("Número: " + numero);
+});
+// Salida:
+// Número: 1
+// Número: 2
+// Número: 3
+// Número: 4
+// Número: 5
+
+// Con arrow function (más moderno)
+let frutas = ["🍎 Manzana", "🍌 Plátano", "🍇 Uvas"];
+
+frutas.forEach(fruta => {
+    console.log("Me gusta: " + fruta);
+});
+// Imprime:
+// Me gusta: 🍎 Manzana
+// Me gusta: 🍌 Plátano
+// Me gusta: 🍇 Uvas
+
+// ================================
+
+// forEach también te dice la POSICIÓN (índice)
+let colores = ["Rojo", "Verde", "Azul"];
+
+colores.forEach(function(color, indice) {
+    console.log("Posición " + indice + ": " + color);
+});
+// Imprime:
+// Posición 0: Rojo
+// Posición 1: Verde
+// Posición 2: Azul
+
+// ================================
+
+// Ejemplo práctico: Calcular el total
+let precios = [10, 20, 15, 30];
+let total = 0;
+
+precios.forEach(function(precio) {
+    total = total + precio;
+});
+
+console.log("El total es: $" + total); // El total es: $75
+
